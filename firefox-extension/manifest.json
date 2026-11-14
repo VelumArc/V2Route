@@ -1,0 +1,74 @@
+{
+  "manifest_version": 3,
+  "name": "Proxy V2Route",
+  "version": "1.2.43",
+  "description": "__MSG_appDescription__",
+  "default_locale": "en",
+  "icons": {
+    "16": "v2route-ui/icons/icon-16.png",
+    "32": "v2route-ui/icons/icon-32.png",
+    "48": "v2route-ui/icons/icon-48.png",
+    "64": "v2route-ui/icons/icon-64.png",
+    "128": "v2route-ui/icons/icon-128.png"
+  },
+  "permissions": [
+    "proxy",
+    "storage",
+    "nativeMessaging",
+    "alarms"
+  ],
+  "action": {
+    "default_title": "Proxy V2Route",
+    "default_popup": "v2route-ui/popup.html",
+    "default_icon": {
+      "16": "v2route-ui/icons/icon-16.png",
+      "20": "v2route-ui/icons/icon-20.png",
+      "24": "v2route-ui/icons/icon-24.png",
+      "32": "v2route-ui/icons/icon-32.png",
+      "40": "v2route-ui/icons/icon-40.png",
+      "48": "v2route-ui/icons/icon-48.png",
+      "64": "v2route-ui/icons/icon-64.png",
+      "128": "v2route-ui/icons/icon-128.png"
+    }
+  },
+  "options_ui": {
+    "page": "v2route-ui/options.html",
+    "open_in_tab": true
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+V"
+      }
+    }
+  },
+  "background": {
+    "scripts": [
+      "v2route-tool-cache.js",
+      "v2route-ui/node-measure-client.js",
+      "v2route-library.js",
+      "v2route-background.js"
+    ]
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "v2route@v2route.local",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": [
+          "authenticationInfo",
+          "browsingActivity"
+        ],
+        "optional": [
+          "locationInfo"
+        ]
+      }
+    }
+  },
+  "optional_host_permissions": [
+    "https://ping0.cc/*"
+  ],
+  "optional_permissions": [
+    "scripting"
+  ]
+}

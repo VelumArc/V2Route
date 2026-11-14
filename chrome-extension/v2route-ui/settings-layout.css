@@ -1,0 +1,20 @@
+/* Settings-only composition; data and existing controls are unchanged. */
+.settings-grid { grid-template-columns:minmax(0,1.38fr) minmax(0,1fr); align-items:start; gap:22px; }
+.settings-grid .settings-column { min-width:0; gap:22px; }
+.settings-grid .companion-settings .path-field { display:grid; grid-template-columns:minmax(110px,140px) minmax(0,1fr); gap:8px 14px; align-items:center; margin-block:18px; }
+.settings-grid .path-field>.field-label { margin:0; line-height:1.5; }
+.settings-grid .path-field .path-input-row { min-width:0; }
+.settings-grid .path-copy-feedback { grid-column:2; }
+.settings-grid .companion-settings>.button:last-child { display:flex; margin:22px 0 0 auto; min-height:42px; }
+.settings-grid .core-panel>.component-status { display:flex; width:100%; padding:14px 16px; margin-block:18px 12px; border:1px solid var(--panel-edge); border-radius:12px; background:var(--aurora-soft-glass); line-height:1.5; }
+.settings-grid .core-panel:has(.setup-actions .primary[hidden])>.component-status:not(.error) { color:#177047; border-color:#6ebc934d; background:linear-gradient(110deg,#e6f8ee,#d6f3e59e); }
+.settings-grid .core-panel>small:not(:empty) { display:inline-flex; padding:5px 10px; border:1px solid var(--panel-edge); border-radius:999px; background:var(--aurora-soft-glass); font-size:12px; line-height:1.5; overflow-wrap:anywhere; }
+.settings-grid .core-panel .setup-actions { margin-block:18px; gap:12px; }
+.settings-grid .core-panel>p:last-child { line-height:1.7; }
+.settings-grid .card:has(.backup-actions) { padding-bottom:26px; }
+.settings-grid .backup-actions { gap:14px; margin-top:24px; padding-top:6px; }
+.settings-grid .backup-actions>.button { min-height:44px; padding-inline:18px; }
+:root[data-theme=dark] .settings-grid .core-panel:has(.setup-actions .primary[hidden])>.component-status:not(.error) { color:#91e3b5; border-color:#64be8b66; background:linear-gradient(110deg,#1b463d,#244e48); }
+@media(prefers-color-scheme:dark) { :root[data-theme=auto] .settings-grid .core-panel:has(.setup-actions .primary[hidden])>.component-status:not(.error) { color:#91e3b5; border-color:#64be8b66; background:linear-gradient(110deg,#1b463d,#244e48); } }
+@media(max-width:1100px) { .settings-grid { grid-template-columns:minmax(0,1fr); } }
+@media(max-width:600px) { .settings-grid { gap:16px; } .settings-grid .companion-settings .path-field { grid-template-columns:minmax(0,1fr); gap:8px; margin-block:16px; } .settings-grid .path-copy-feedback { grid-column:1; } .settings-grid .backup-actions { flex-wrap:wrap; } }

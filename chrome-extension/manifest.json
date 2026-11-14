@@ -1,0 +1,58 @@
+{
+  "manifest_version": 3,
+  "name": "Proxy V2Route",
+  "version": "1.2.43",
+  "description": "__MSG_appDescription__",
+  "default_locale": "en",
+  "icons": {
+    "16": "v2route-ui/icons/icon-16.png",
+    "32": "v2route-ui/icons/icon-32.png",
+    "48": "v2route-ui/icons/icon-48.png",
+    "64": "v2route-ui/icons/icon-64.png",
+    "128": "v2route-ui/icons/icon-128.png"
+  },
+  "permissions": [
+    "proxy",
+    "storage",
+    "nativeMessaging",
+    "browsingData",
+    "alarms"
+  ],
+  "action": {
+    "default_title": "Proxy V2Route",
+    "default_popup": "v2route-ui/popup.html",
+    "default_icon": {
+      "16": "v2route-ui/icons/icon-16.png",
+      "20": "v2route-ui/icons/icon-20.png",
+      "24": "v2route-ui/icons/icon-24.png",
+      "32": "v2route-ui/icons/icon-32.png",
+      "40": "v2route-ui/icons/icon-40.png",
+      "48": "v2route-ui/icons/icon-48.png",
+      "64": "v2route-ui/icons/icon-64.png",
+      "128": "v2route-ui/icons/icon-128.png"
+    }
+  },
+  "options_ui": {
+    "page": "v2route-ui/options.html",
+    "open_in_tab": true
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+V"
+      }
+    }
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm4sP86H13otlSEegVTxVFSPYuNpEFn5NW0xaoYnMbGZeOjyOwswljq8I/5Lkeoe01m44bRtBXD8omtRe1kGYD4K9E9UjhVnrwxIOwAdbe2zp4pkNMNdRSQojo0qVkjvDp6HBXulK33PNtD1147zua5Z5jMjR+xTDmf2nJUDgeWvKRX7OmslJFryn0c0qjzzODLC0asYtNee+VAA6LsAvt1Xob9KpdjZUWuVGDIOF8gi5HoqvTvaa8p6hvljrzah7rNkmL1Cy2ewezXRwn6MLq2joLmOW3+oU8qaRdoE+8pYUyl+eqNdSCfCxGXluUZAzguCQhYTgvD3ZrnmYo2C5pwIDAQAB",
+  "minimum_chrome_version": "120",
+  "background": {
+    "service_worker": "v2route-background.js"
+  },
+  "incognito": "spanning",
+  "optional_host_permissions": [
+    "https://ping0.cc/*"
+  ],
+  "optional_permissions": [
+    "scripting"
+  ]
+}

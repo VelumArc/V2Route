@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" class="popup-document">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Proxy V2Route</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="refinement.css">
+  <link rel="stylesheet" href="ip-panel.css">
+  <link rel="stylesheet" href="polish.css">
+  <link rel="stylesheet" href="popup-polish.css">
+  <link rel="stylesheet" href="aurora.css">
+  <link rel="stylesheet" href="popup-aurora.css">
+<link rel="stylesheet" href="brand-controls.css">
+</head>
+<body class="popup-body">
+  <header class="popup-header">
+    <img class="brand-symbol" src="icons/brand-display-144.png" srcset="icons/brand-display-72.png 1x, icons/brand-display-144.png 2x, icons/brand-display-216.png 3x" alt="" aria-hidden="true">
+    <span class="popup-wordmark brand-label" role="img" aria-label="Proxy V2Route"><span class="brand-proxy">Proxy</span> <span class="brand-v2route">V2Route</span></span>
+    <div class="popup-brand-caption"><small id="popup-intro"></small></div>
+    <div class="popup-current" id="popup-connection" role="button" tabindex="0" aria-describedby="popup-connection-help" data-health="unknown">
+    <span class="local-dot" aria-hidden="true"></span>
+    <span id="popup-selected-label"></span>
+    <span id="popup-current-icon" class="popup-icon-slot" aria-hidden="true"></span>
+    <span id="popup-current"></span>
+    </div>
+    <div id="popup-connection-help" class="connection-tooltip" role="tooltip"></div>
+    <span id="popup-health-announcement" class="health-sr-only" role="status" aria-live="polite"></span>
+  </header>
+  <div id="popup-status" role="status" hidden></div>
+  <div id="popup-profiles">
+    <div id="popup-builtins"></div>
+    <div class="popup-divider" role="separator"></div>
+    <div id="popup-scenarios"></div>
+  </div>
+  <div class="popup-divider popup-actions-divider" role="separator"></div>
+  <div class="popup-actions">
+    <button id="popup-ip-tools" class="popup-tool" type="button"><img src="icons/popup-network.svg" alt=""><span></span></button>
+    <button id="popup-settings" class="popup-tool" type="button"><img src="icons/popup-settings.svg" alt=""><span></span></button>
+  </div>
+  <footer class="popup-footer"><span id="popup-footer-label"></span><span id="popup-version"></span></footer>
+  <script src="api.js"></script><script src="i18n.js"></script><script src="ip-tools.js"></script><script src="connection-health.js"></script><script src="popup-order.js"></script><script src="popup.js"></script>
+</body>
+</html>

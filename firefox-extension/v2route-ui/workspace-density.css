@@ -1,0 +1,435 @@
+/* Options-page density only. Keep toolbar popup sizing independent. */
+:root { --workspace-scale: .85; --workspace-max: 2259px; }
+body { zoom: var(--workspace-scale); }
+.app-shell { min-height: calc(100vh / var(--workspace-scale)); min-height: calc(100dvh / var(--workspace-scale)); }
+
+/* Match the shared glass surfaces, including native top-layer dialogs. */
+dialog {
+  width: 650px;
+  max-width: calc(100vw / var(--workspace-scale) - 40px);
+  max-height: calc(100dvh / var(--workspace-scale) - 40px);
+  padding: 0;
+  color: var(--text);
+  background: var(--card-wave) right top / 100% auto no-repeat, var(--panel-glass);
+  border: 1px solid var(--panel-highlight);
+  border-radius: 22px;
+  box-shadow: var(--panel-shadow), 0 24px 72px #14285438;
+  scrollbar-color: var(--muted) transparent;
+  scrollbar-width: thin;
+  color-scheme: inherit;
+}
+dialog::backdrop { background: #2037616b; backdrop-filter: blur(6px); }
+:root[data-theme=dark] dialog::backdrop { background: #030b1cb3; }
+dialog .modal-body { padding: 26px 28px; }
+dialog .modal-body h2 { margin: 0 0 18px; font-size: 24px; }
+dialog :is(input,textarea,select) { color: var(--text); background: var(--polish-field); border-color: var(--border); color-scheme: inherit; }
+dialog textarea { min-height: 150px; line-height: 1.6; resize: vertical; }
+dialog :is(textarea,pre) { scrollbar-color: var(--muted) transparent; scrollbar-width: thin; }
+dialog .import-examples pre { max-height: 210px; margin: 12px 0 0; color: var(--text); background: color-mix(in srgb,var(--surface-soft) 80%,transparent); }
+dialog .modal-actions { margin-top: 20px; padding-top: 18px; }
+
+/* Keep the report beside a compact independent tools column. */
+.ip-tools-layout { grid-template-columns: minmax(0,1fr) minmax(310px,.48fr); gap: 22px; }
+.ip-side-column { min-width: 0; display: grid; gap: 20px; align-content: start; }
+.ip-side-column > .card { position: relative; isolation: isolate; min-width: 0; padding: 24px; border-radius: 18px; background: var(--panel-glass); border: 1px solid var(--panel-highlight); box-shadow: var(--panel-shadow),inset 0 1px 0 var(--panel-highlight); }
+.ip-side-column > .card::before { content: ''; position: absolute; z-index: -1; inset: 0; border-radius: inherit; background: var(--card-wave) right top / 100% auto no-repeat; opacity: var(--panel-wave-opacity); pointer-events: none; }
+.ip-tools-layout > .ip-check-card { padding: 24px; }
+.ip-check-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 12px 20px; flex-wrap: wrap; }
+.ip-check-toolbar .ip-context { margin: 0; min-width: 0; }
+.ip-check-toolbar .ip-context strong { max-width: 26ch; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ip-check-toolbar .ip-controls { margin: 0; gap: 8px; }
+.ip-check-toolbar .ip-controls select { width: 140px; }
+.ip-check-card .ip-disclosure { border: 0; padding: 0; margin: 12px 0 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.ip-check-card .ip-result { margin-top: 14px; padding-top: 14px; }
+.ip-check-card .ip-address-line { margin: 0; }
+.ip-check-card .ip-address { font-size: 26px; line-height: 1.35; }
+.ip-copy-feedback:empty { display: none; }
+.ip-copy-feedback:not(:empty) { margin: 4px 0; min-height: 0; }
+.ip-result-meta { display: flex; align-items: center; gap: 8px 18px; flex-wrap: wrap; color: var(--muted); font-size: 12px; margin-top: 4px; }
+.ip-result-meta > :first-child { max-width: 40ch; overflow-wrap: anywhere; }
+.ip-check-card .ip-public-report { margin-top: 16px; padding-top: 16px; }
+.ip-check-card .ip-public-report h2 { font-size: 18px; margin: 0 0 12px; }
+.ip-check-card .ip-public-table :is(th,td) { padding: 10px 12px; }
+.ip-notes { margin-top: 12px; color: var(--muted); font-size: 12px; }
+.ip-notes summary { cursor: pointer; width: fit-content; line-height: 1.8; }
+.ip-notes p { margin: 8px 0 0; }
+.ip-side-column .ip-links-card .ip-external { padding: 10px 0; }
+.ip-side-column #ip-public-check { margin: 2px 0 12px; }
+.ip-side-column .ip-network-card { grid-column: auto; }
+.ip-side-column .ip-network-card h2 { font-size: 20px; margin-bottom: 12px; }
+.ip-network-card .ip-controls { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+.ip-network-card .ip-controls select { grid-column: 1 / -1; width: 100%; max-width: none; }
+.ip-network-card .ip-controls #network-download { grid-column: 1 / -1; }
+.ip-network-card .ip-controls .button { min-width: 0; padding-inline: 12px; }
+.ip-network-card .ip-controls [hidden] { display: none; }
+.ip-side-column .ip-small { font-size: 13px; line-height: 1.65; }
+.ip-side-column .ip-network-result { font-size: 13px; }
+.ip-side-column .ip-network-custom { grid-template-columns: minmax(0,1fr) 85px; }
+@media(max-width:1000px) { .ip-tools-layout { grid-template-columns: minmax(0,1fr) minmax(280px,.55fr); } }
+@media(max-width:760px) {
+  .ip-tools-layout { grid-template-columns: minmax(0,1fr); }
+  .ip-side-column { grid-row: auto; }
+  .ip-side-column .ip-links-card { grid-row: auto; }
+  .ip-tools-layout > .ip-check-card, .ip-side-column > .card { padding: 18px; }
+  .ip-check-toolbar { align-items: stretch; }
+  .ip-check-toolbar .ip-context { flex-basis: 100%; }
+  dialog .modal-body { padding: 22px; }
+}
+
+/* A report is a compact set of facts, rather than a wide sparse table. */
+.ip-check-card .ip-public-report { margin-top: 16px; padding-top: 16px; }
+.ip-check-card .ip-public-report h2 { font-size: 21px; margin-bottom: 14px; }
+.ip-check-card .ip-report-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0; margin: 0; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; background: var(--polish-field); }
+.ip-report-field { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; min-width: 0; padding: 14px 16px; border-bottom: 1px solid var(--border); }
+.ip-report-column { display: flex; flex-direction: column; min-width: 0; margin: 0; }
+.ip-report-column + .ip-report-column { border-left: 1px solid var(--border); }
+.ip-report-column .ip-report-field { flex: 1; }
+.ip-report-column .ip-report-field:last-child { border-bottom: 0; }
+.ip-report-field dt { flex: 0 0 88px; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.55; font-weight: 600; }
+.ip-report-field dd { flex: 1 1 135px; min-width: 0; margin: 0; color: var(--text); font-size: 16px; line-height: 1.6; overflow-wrap: anywhere; }
+.ip-report-grid .ip-result-badge { font-size: inherit; }
+.ip-report-footer { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 18px; padding-top: 13px; color: var(--muted); font-size: 13px; line-height: 1.5; }
+.ip-report-footer .ip-report-source { margin-right: auto; }
+.ip-report-footer :is(.ip-external,.ip-report,.ip-notes) { margin: 0; padding: 0; border: 0; font-size: inherit; }
+.ip-report-footer .ip-notes { flex: 0 1 auto; }
+.ip-report-footer .ip-notes[open] { flex-basis: 100%; }
+.ip-check-card > .ip-message:empty { display: none; }
+.ip-check-card .ip-address { font-size: 29px; }
+.ip-check-card .ip-result-meta { font-size: 13px; }
+.ip-check-card .ip-context .ip-small { font-size: 14px; }
+
+/* Shared outer glass, kept behind content so pickers remain interactive. */
+.profiles-layout > :is(.profile-list,.profile-editor) { position: relative; isolation: isolate; background: var(--panel-glass); border: 1px solid var(--panel-highlight); box-shadow: var(--panel-shadow),inset 0 1px var(--panel-highlight); }
+.profiles-layout > :is(.profile-list,.profile-editor)::before { content: ''; position: absolute; z-index: -1; inset: 0; border-radius: inherit; pointer-events: none; background: var(--card-wave) right top / 100% auto no-repeat; opacity: var(--panel-wave-opacity); }
+.profiles-layout > .profile-list::before { background-size: auto 100%; background-position: 65% top; }
+.editor-heading .profile-heading-name { display: flex; flex-direction: column; min-width: 0; align-self: stretch; }
+.profile-editor { padding-top: 24px; }
+.editor-heading { min-height: 96px; align-items: stretch; padding-bottom: 0; }
+.editor-heading .heading-mode,.editor-heading > .button { align-self: center; }
+main { padding-bottom: 20px; }
+.sidebar .nav-item.active::after { right: 8px; }
+.profile-name-row { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 20px; min-width: 0; }
+.editor-heading .profile-name-row h2 { width: auto; min-width: 0; max-width: 100%; margin: 0; }
+.profile-name-row > [hidden] { display: none !important; }
+.editor-heading .profile-name-row .profile-name-input { flex: 1 1 180px; width: auto; }
+.advanced-body textarea::placeholder { color: var(--muted); opacity: .8; }
+.brand img { object-fit: contain; }
+@container profile-editor (max-width:560px) { .profile-name-row { column-gap: 12px; } }
+@media(max-width:1000px) {
+ .ip-check-card .ip-report-grid { grid-template-columns: minmax(0,1fr); }
+ .ip-report-column + .ip-report-column { border-left: 0; border-top: 1px solid var(--border); }
+ 
+}
+@media(max-width:760px) { .ip-report-field { padding: 12px 14px; } .ip-report-field dd { font-size: 15px; } }
+
+/* A readable report heading without the old full-width notice strip. */
+.ip-check-card .ip-context { gap: 10px; }
+.ip-check-card .ip-context .ip-small { font-size: 16px; }
+.ip-check-card .ip-context strong { font-size: 18px; line-height: 1.5; padding: 5px 11px; }
+.ip-check-card .ip-disclosure { background: none; background-image: none; box-shadow: none; border: 0; border-radius: 0; padding: 0; margin: 7px 0 0; font-size: 14px; line-height: 1.5; }
+.ip-check-card .ip-result { margin-top: 12px; padding-top: 12px; }
+.ip-check-card .ip-result-meta { font-size: 14px; gap: 6px 16px; }
+.ip-network-card .ip-network-targets { display: grid; grid-template-columns: minmax(105px,.8fr) minmax(0,1.2fr); gap: 8px; margin-block: 12px; }
+.ip-network-targets select { min-width: 0; width: 100%; }
+.ip-network-card .ip-controls { grid-template-columns: repeat(3,minmax(0,1fr)); margin-block: 10px; }
+.ip-network-card .ip-controls #network-cancel { grid-column: 1 / -1; }
+.ip-network-card .ip-controls .button { padding: 8px 6px; min-height: 38px; font-size: 14px; }
+.ip-network-card .ip-network-result { min-width: 0; }
+.network-console { margin-top: 12px; border: 1px solid #3e638a; border-radius: 12px; overflow: hidden; background: #111d30; color: #d9e8ff; box-shadow: inset 0 1px #ffffff0b; }
+.network-console[hidden] { display: none; }
+.network-console-bar { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 9px 12px; background: #1b2b44; color: #b9d7ff; font: 600 13px/1.5 system-ui,sans-serif; }
+.network-console-bar button { border: 0; background: none; padding: 0 3px; color: #a3c9ff; font-size: 12px; box-shadow: none; }
+.network-console-log { height: 205px; overflow: auto; margin: 0; padding: 10px 12px; scrollbar-color: #50769a #111d30; font: 13px/1.7 Consolas,'Cascadia Mono',monospace; white-space: pre-wrap; overflow-wrap: anywhere; }
+.network-log-line { min-height: 1.7em; }
+.network-log-line.good { color: #82dfb7; }.network-log-line.warn { color: #f5ca7d; }.network-log-line.error { color: #ff9c9c; }
+.network-console-stats { display: flex; flex-wrap: wrap; gap: 4px 15px; border-top: 1px solid #3a526c; padding: 9px 12px; font: 13px/1.55 Consolas,monospace; color: #b9d7ff; }
+.network-mtr-scroll { max-height: 250px; overflow: auto; scrollbar-color: #50769a #111d30; }
+.network-mtr-table { border-collapse: collapse; width: 100%; font: 12px/1.5 Consolas,monospace; color: #d9e8ff; }
+.network-mtr-table th,.network-mtr-table td { padding: 5px 7px; text-align: right; border-bottom: 1px solid #30445d; white-space: nowrap; }
+.network-mtr-table th:nth-child(2),.network-mtr-table td:nth-child(2) { text-align: left; }
+.network-mtr-table th { position: sticky; top: 0; background: #1b2b44; font-weight: 500; color: #a3c9ff; }
+.network-mtr-table tr[data-destination=true] { color: #82dfb7; }
+.ip-network-card .ip-message:empty { display: none; }
+@media(max-width:520px) { .ip-check-card .ip-context strong { font-size: 17px; } .ip-check-card .ip-context .ip-small { font-size: 15px; } }
+
+/* Current profile and exit address share the header; copy is a quiet inline icon. */
+.ip-check-toolbar { display: grid; grid-template-columns: minmax(190px,.85fr) minmax(0,1fr) auto; align-items: center; gap: 14px 22px; }
+.ip-context-block,.ip-address-summary { min-width: 0; }
+.ip-check-card .ip-context { flex-wrap: wrap; gap: 6px 10px; }
+.ip-check-card .ip-context .ip-small { font-size: 18px; }
+.ip-check-card .ip-context strong { font-size: 22px; }
+.ip-check-card .ip-address-summary .ip-address-line { justify-content: flex-start; gap: 9px; align-items: center; }
+.ip-check-card .ip-copy-icon { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 30px; width: 30px; height: 30px; min-height: 30px; padding: 5px; border: 0; border-radius: 6px; background: transparent; box-shadow: none; color: var(--accent); cursor: pointer; }
+.ip-copy-icon svg { width: 18px; height: 18px; }
+.ip-check-card .ip-copy-icon:hover { background: color-mix(in srgb,var(--accent) 12%,transparent); }
+.ip-copy-icon:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.ip-address-summary .ip-copy-feedback { font-size: 13px; }
+.ip-check-card .ip-result { margin-top: 16px; padding-top: 16px; }
+.ip-check-card .ip-result:empty { display: none; }
+.ip-check-card .ip-result .ip-public-report { margin-top: 0; padding-top: 0; border-top: 0; }
+@media(max-width:1200px) {
+  .ip-check-toolbar { grid-template-columns: minmax(0,1fr) auto; }
+  .ip-context-block { grid-column: 1; grid-row: 1; }
+  .ip-check-toolbar .ip-controls { grid-column: 2; grid-row: 1; }
+  .ip-address-summary { grid-column: 1 / -1; }
+}
+@media(max-width:600px) {
+  .ip-check-toolbar { grid-template-columns: minmax(0,1fr); gap: 12px; }
+  .ip-check-toolbar .ip-controls { grid-column: 1; grid-row: 3; justify-content: flex-start; }
+  .ip-check-card .ip-context .ip-small { font-size: 16px; }
+  .ip-check-card .ip-context strong { font-size: 20px; }
+}
+
+/* Success feedback floats above content; errors remain visible until addressed. */
+#status.success{position:fixed;inset:18px 22px auto auto;z-index:10000;width:auto;max-width:min(460px,calc(100vw - 44px));margin:0;padding:10px 17px;border:1px solid #35a57535;border-radius:12px;background:#f2fcf6ed;color:#16854e;box-shadow:0 5px 22px #163c351c;font-size:15px;line-height:1.4;pointer-events:none}
+#status.success::before{content:'✓';margin-right:8px;font-weight:700}
+:root[data-theme=dark] #status.success{background:#183329ed;color:#70e0a3;border-color:#60c18b4d;box-shadow:0 5px 22px #0004}
+
+/* Compact report above a full-width, always visible diagnostics console. */
+.ip-tools-layout>.ip-check-card{padding:18px 22px}
+.ip-check-toolbar{gap:10px 18px}
+.ip-check-card .ip-context strong{padding:3px 10px}
+.ip-check-card .ip-disclosure{margin-top:4px}
+.ip-check-card .ip-result{margin-top:10px;padding-top:10px}
+.ip-check-card .ip-public-report h2{margin-bottom:10px}
+.ip-check-card .ip-report-field{padding:9px 14px}
+.ip-check-card .ip-report-footer{padding-top:8px;gap:6px 16px}
+.ip-tools-layout>.ip-network-card{grid-column:1/-1;padding:22px;min-width:0}
+.ip-network-card h2{margin:0 0 12px}
+.ip-network-toolbar{display:grid;grid-template-columns:minmax(280px,.8fr) minmax(480px,1.2fr);align-items:center;gap:10px 16px}
+.ip-network-toolbar .ip-network-targets{margin:0;gap:10px}
+.ip-network-toolbar .ip-controls{display:flex;flex-wrap:wrap;gap:8px;margin:0}
+.ip-network-toolbar .ip-controls .button{flex:1 1 70px;padding:8px 12px;min-height:40px}
+.ip-network-toolbar .ip-controls #network-download{flex:1.6 1 170px}
+.ip-network-toolbar .ip-controls #network-cancel{flex:0 1 80px}
+.ip-network-toolbar .ip-network-custom{grid-column:1/-1}
+.ip-network-toolbar .ip-network-custom[hidden]{display:none}
+.ip-network-card .network-console{margin-top:14px}
+.ip-network-card .network-console-log{height:300px;font-size:15px;line-height:1.75;padding:12px 16px}
+.ip-network-card .network-console-bar,.ip-network-card .network-console-stats{font-size:14px;padding:10px 16px}
+.network-console-stats:empty{display:none}
+.ip-network-card .network-mtr-scroll{min-height:360px;max-height:min(65vh,680px)}
+.ip-network-card .network-mtr-table th,.ip-network-card .network-mtr-table td{font-variant-numeric:tabular-nums}
+.ip-network-card .network-mtr-table th:not(:nth-child(2)),.ip-network-card .network-mtr-table td:not(:nth-child(2)){width:8%}
+.ip-network-card .network-mtr-table{font-size:14px}
+.ip-network-card .network-mtr-table th,.ip-network-card .network-mtr-table td{padding:7px 12px}
+@media(max-width:1050px){.ip-network-toolbar{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){
+ .ip-tools-layout>.ip-check-card,.ip-tools-layout>.ip-network-card{padding:16px}
+ .ip-network-toolbar .ip-controls .button{flex:1 1 25%}
+ .ip-network-toolbar .ip-controls #network-download{flex:1 1 65%}
+ .ip-network-card .network-console-log{height:260px;font-size:14px;padding:10px 12px}
+ .ip-network-card .network-console-bar,.ip-network-card .network-console-stats{padding:9px 12px}
+}
+
+/* Compact tool launcher; external content exists only while its dialog is open. */
+body[data-page="ip-tools"]{--ip-readable:#385474;--ip-heading:#19365f}
+:root[data-theme="dark"] body[data-page="ip-tools"]{--ip-readable:#bed0e8;--ip-heading:#e1edff}
+body[data-page="ip-tools"] #page-intro,.ip-tools-layout :is(.muted,.ip-small,.ip-disclosure,.ip-result-meta,.ip-report-source,.ip-notes summary){color:var(--ip-readable)}
+.ip-tools-layout .ip-report-field dt{color:var(--ip-readable)}
+.ip-side-column>.ip-links-card{padding:16px}
+.ip-side-column>.ip-links-card h2{font-size:18px;margin:0 0 10px}
+.ip-tool-report-actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin-bottom:12px}
+.ip-side-column #ip-public-check{font-size:12px;padding:6px 10px;min-height:32px;margin:0}
+.ip-side-column .ip-tool-report-actions .ip-external{border:0;padding:0;font-size:12px}
+.ip-tool-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.ip-tools-layout button.ip-external{appearance:none;background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;text-align:start}
+.ip-tool-button{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-width:0;min-height:48px;padding:8px 10px;border:1px solid var(--border);border-radius:10px;background:var(--surface-soft);color:var(--ip-heading);text-align:start;cursor:pointer;line-height:1.25}
+.ip-tool-button strong{font-size:14px;font-weight:650}
+.ip-tool-button small{font-size:12px;color:var(--ip-readable);margin-top:3px}
+.ip-tool-button:hover{border-color:var(--accent);background:var(--accent-soft)}
+.ip-tool-button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.ip-links-card>.ip-notes{margin-top:10px;font-size:12px}
+.ip-tool-dialog{box-sizing:border-box;width:min(1120px,calc(100vw - 32px));height:min(780px,calc(100dvh - 32px));max-width:none;max-height:none;margin:auto;padding:0;border:1px solid var(--border);border-radius:18px;background:var(--bg);color:var(--text);box-shadow:0 20px 70px #06122b55;overflow:hidden}
+.ip-tool-dialog[open]{display:grid;grid-template-rows:auto minmax(0,1fr)}
+.ip-tool-dialog::backdrop{background:#07152a77;backdrop-filter:blur(4px)}
+.ip-tool-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;border-bottom:1px solid var(--border);background:var(--panel-glass)}
+.ip-tool-heading{min-width:0}.ip-tool-header h2{font-size:18px;margin:0;line-height:1.3}.ip-tool-provider{font-size:12px;margin:3px 0 0;color:var(--ip-readable)}
+.ip-tool-actions,.ip-tool-controls{display:flex;align-items:center;gap:8px}
+.ip-tool-actions .button{font-size:13px;padding:7px 12px;min-height:34px}
+.ip-tool-body{min-height:0;min-width:0;overflow:auto;padding:22px}
+.ip-tool-frame-body{display:grid;grid-template-rows:minmax(0,1fr);position:relative;padding:0;background:white}
+.ip-tool-frame{border:0;width:100%;height:100%;display:block;background:white}
+.ip-tool-status{font-size:14px;color:var(--ip-readable);margin:0 0 16px;line-height:1.5}
+.ip-tool-frame-body>.ip-tool-status{position:absolute;top:12px;left:16px;z-index:1;background:var(--bg);border-radius:8px;padding:8px 12px;margin:0}
+.ip-tool-status[hidden]{display:none}.ip-tool-status.error{color:var(--danger,#ba3652)}
+.ip-site-results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:20px}
+.ip-site-result{display:flex;justify-content:space-between;gap:10px;padding:16px;border:1px solid var(--border);border-radius:10px}
+.ip-site-result span{color:var(--ip-readable);font-size:14px}.ip-site-result[data-outcome="ok"] span{color:#158052}.ip-site-result[data-outcome="error"] span{color:var(--danger,#ba3652)}
+.ip-tool-controls select{width:110px}.ip-tool-speed{font-size:36px;font-weight:700;font-variant-numeric:tabular-nums;margin:24px 0 12px}
+@media(prefers-color-scheme:dark){:root[data-theme="auto"] body[data-page="ip-tools"]{--ip-readable:#bed0e8;--ip-heading:#e1edff}}
+@media(max-width:600px){.ip-tool-dialog{width:calc(100vw - 16px);height:calc(100dvh - 16px);border-radius:12px}.ip-tool-header{padding:12px;gap:8px}.ip-tool-header h2{font-size:16px}.ip-tool-body:not(.ip-tool-frame-body){padding:16px}.ip-site-results{grid-template-columns:minmax(0,1fr)}.ip-site-result{padding:12px}}
+
+/* Caption and title/input keep the same reserved geometry in every name state. */
+.editor-heading .profile-heading-name,.editor-heading.editing-name .profile-heading-name{align-self:stretch;justify-content:flex-start;flex-wrap:nowrap}
+.profile-name-caption{display:flex;align-items:center;gap:8px;height:22px;min-height:22px;margin-bottom:7px;white-space:nowrap}
+.profile-name-label{font-size:13px;line-height:22px;margin:0;color:var(--muted)}
+.editor-heading .profile-name-row .rename-link{height:22px;min-height:22px!important;padding:0 6px!important;font-size:11px!important;line-height:18px!important;flex:none}
+.editor-heading .profile-name-row .rename-link[hidden]{display:none!important}
+.editor-heading{align-items:flex-start;min-height:96px}
+.editor-heading .profile-name-row{display:grid;grid-template-columns:minmax(0,320px) max-content;gap:12px;height:44px;min-height:44px;align-items:center}
+.editor-heading:not(.editing-name) .profile-name-row{grid-template-columns:fit-content(320px) max-content;column-gap:20px;justify-content:start}
+.editor-heading .profile-name-row .profile-name-input{color:#3b50d7;caret-color:currentColor}
+.editor-heading .profile-name-row .profile-name-input::selection{color:#fff;background:#3b50d7}
+:root[data-theme=dark] .editor-heading .profile-name-row .profile-name-input{color:#9ba7ff}
+@media(prefers-color-scheme:dark){:root[data-theme=auto] .editor-heading .profile-name-row .profile-name-input{color:#9ba7ff}}
+.predecessor-panel>.predecessor-mode-field{grid-template-columns:minmax(0,1fr);gap:0}
+.predecessor-mode-field>select{font-weight:650}
+.editor-heading .profile-name-row h2,.editor-heading .profile-name-row .profile-name-input{grid-column:1;grid-row:1}
+.editor-heading .profile-name-row h2{height:44px;line-height:44px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.editor-heading .profile-name-row .profile-name-input{min-height:44px;height:44px;width:100%;margin:0;flex:0 1 320px}
+.editor-heading .profile-name-row .rename-link{grid-column:2;grid-row:1;justify-self:start}
+.editor-heading .heading-mode{align-self:flex-start;margin:0;gap:7px}
+.editor-heading .heading-mode .field-label{height:22px;line-height:22px}
+.editor-heading>.button{align-self:flex-start;margin-top:29px;height:44px}
+.companion-settings>h2{display:flex;align-items:center;flex-wrap:wrap;gap:12px}
+.companion-settings>h2 .component-status{margin:0;min-height:0;font-size:12px;padding:4px 9px;line-height:20px}
+.import-examples pre.code-input{height:auto;min-height:0;max-height:none;overflow-x:auto;overflow-y:hidden;padding:8px 10px;line-height:1.5;margin:7px 0}
+#modal:has(.import-examples){padding:22px;max-height:calc(100dvh - 32px)}
+#modal:has(.import-examples) .modal-actions{margin-top:12px;padding-top:12px}
+#modal:has(.import-examples) textarea{min-height:120px;height:120px}
+.ip-tools-layout .ip-message.ip-report-failure,.ip-report-failure button.ip-external{color:var(--muted);font-size:13px}
+.ip-source-button{font-weight:500;text-decoration:underline;text-underline-offset:3px}
+.ip-tool-dialog:modal{overscroll-behavior:contain}
+.ip-tool-dialog::backdrop{overflow:hidden;overscroll-behavior:contain}
+.ip-tool-dialog[open]{display:block}
+.ip-tool-surface{display:grid;grid-template-rows:auto minmax(0,1fr);width:100%;height:100%;min-height:0;background:var(--bg);color:var(--text)}
+html:has(.ip-tool-dialog[open][data-expanded=true]){overflow:hidden}
+.ip-tool-dialog[data-expanded=true]{width:var(--tool-width);height:var(--tool-height);border-radius:0;border:0;max-width:none;max-height:none}
+.ip-tool-fullscreen{display:inline-flex;align-items:center;justify-content:center;flex:none;width:36px;min-width:36px;padding:7px!important}
+.ip-tool-fullscreen svg{width:18px;height:18px;display:block}
+
+
+
+.ip-tool-controls{flex-wrap:wrap}.ip-tool-controls>input{flex:1;min-width:140px}.ip-global-results{display:grid;gap:12px;margin-top:14px}.ip-global-result{padding:12px;border:1px solid var(--border);border-radius:10px;min-width:0}.ip-global-result pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px}
+
+/* Size local tools to their content; embedded sites retain the larger viewport. */
+.ip-tool-dialog[data-kind=speed]:not([data-expanded=true]){width:min(580px,calc(100vw - 24px));height:fit-content;max-height:calc(100dvh - 32px)}
+.ip-tool-dialog[data-kind=speed] .ip-tool-body{padding:16px}
+.ip-tool-dialog[data-kind=speed]:not([data-expanded=true]) .ip-tool-surface{height:auto;max-height:calc(100dvh - 34px)}
+/* Keep complete mode labels visible and omit unused live-result rows. */
+.ip-tool-dialog[data-kind=speed] .speed-controls{gap:8px}
+.ip-tool-dialog[data-kind=speed] .speed-mode{flex:1 1 180px;width:auto;min-width:180px}
+.ip-tool-dialog[data-kind=speed] .speed-size{flex:0 0 104px;width:104px;min-width:104px;padding-inline:10px}
+.ip-tool-dialog[data-kind=speed] .speed-controls .button{flex:0 0 auto;min-width:70px;white-space:nowrap}
+.ip-tool-dialog[data-kind=speed] .speed-budget{margin:10px 0 0;font-size:12px;line-height:1.5}
+.ip-tool-dialog[data-kind=speed] .speed-metrics{margin:12px 0 0}
+.ip-tool-dialog[data-kind=speed] .speed-status{margin:8px 0 0}
+.ip-tool-dialog[data-kind=speed] .speed-status:empty{display:none}
+@media(max-width:420px){
+ .ip-tool-dialog[data-kind=speed] .ip-tool-body{padding:12px}
+ .ip-tool-dialog[data-kind=speed] .speed-controls{display:grid;grid-template-columns:minmax(0,1fr) 104px}
+ .ip-tool-dialog[data-kind=speed] .speed-mode,.ip-tool-dialog[data-kind=speed] .speed-size{width:100%;min-width:0}
+ .ip-tool-dialog[data-kind=speed] .speed-controls .button{width:100%;min-width:0}
+ .ip-tool-dialog[data-kind=speed] .speed-start{grid-column:1/-1}
+ .ip-tool-dialog[data-kind=speed] .speed-controls:has(.speed-stop:not([hidden])) .speed-start{grid-column:auto}
+}
+.speed-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:12px 0}
+.speed-metric{min-width:0;border:1px solid var(--border);padding:12px;border-radius:10px}.speed-metric span{display:block;font-size:12px;color:var(--muted)}.speed-metric strong{display:block;margin-top:5px;font-size:18px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.speed-metric-state{display:block;font-size:11px;line-height:1.4;margin-top:6px;color:var(--support-ink,var(--muted))}.speed-metric-state:empty{display:none}.speed-metric[data-phase-state=running]{border-color:var(--accent);background:var(--accent-soft)}
+.ip-tool-group{grid-column:1/-1;font-size:13px;margin:8px 0 0;color:var(--muted)}
+.ip-site-results{gap:7px;margin-top:12px}.ip-site-result{align-items:center;padding:10px;gap:8px}.ip-site-result input{width:15px;flex:none}.ip-site-result strong{flex:1}.ip-site-result span{font-size:12px}
+.ip-tool-target-frame{grid-template-rows:auto minmax(0,1fr)}.ip-frame-controls{padding:10px;background:var(--bg)}.ip-frame-controls p{margin:0;font-size:12px}
+@media(max-width:420px){.speed-metrics{grid-template-columns:1fr}.speed-metric{display:flex;align-items:center;justify-content:space-between}.speed-metric strong{margin:0}}
+
+/* Ordered paths retain the approved glass surfaces and background. */
+.chain-editor{margin:0;min-width:0;width:100%}.chain-toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 10px}.chain-toolbar h3{font-size:22px;font-weight:700;line-height:1.3;margin:0 auto 0 0}.chain-mode-actions,.chain-tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.chain-tools{margin-left:auto}.chain-mode-actions [aria-pressed=true]{border-color:var(--accent);background:var(--accent-soft);box-shadow:inset 0 0 0 1px #5d83ff22}.chain-tools[hidden]{display:none}.chain-toolbar .button{height:44px;min-height:44px;padding:0 14px;font-size:14px;font-weight:600;border-radius:10px;white-space:nowrap}
+/* Configuration and read-only path use one theme across all node modes. */
+.proxy-workspace{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(340px,1fr);gap:18px;align-items:start;min-width:0}
+.proxy-workspace-toolbar{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px 22px;min-width:0}
+.proxy-workspace-heading{flex:1 1 260px;min-width:0}
+.proxy-workspace-heading h3{margin:0;font-size:22px;line-height:1.4;font-weight:720}
+.proxy-workspace-heading p{margin:5px 0 0;font-size:13px;line-height:1.5;color:var(--support-ink,var(--muted))}
+.proxy-config-column{display:grid;gap:14px;min-width:0}
+.proxy-path-column{min-width:0;align-self:start}
+.proxy-workspace.without-companion{grid-template-columns:minmax(0,1fr)}
+.proxy-workspace.without-companion>.proxy-workspace-toolbar{display:none}
+.chain-hops{display:grid;gap:12px}.chain-hop{margin:0}.chain-hop-header h3{font-size:21px;line-height:1.4;font-weight:720;margin:0}
+.proxy-row{position:relative;isolation:isolate;display:grid;grid-template-columns:minmax(0,1fr) 30px;align-items:center;gap:10px 12px;min-height:0;padding:14px 16px}
+.proxy-row::before{content:'';position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--panel-wave) right center/100% 100% no-repeat;opacity:var(--panel-wave-opacity);pointer-events:none}
+.proxy-row>.editor-panel-header{grid-column:1/-1;grid-row:1;min-width:0;min-height:44px;margin:0;padding:0;gap:6px 10px;border:0;border-radius:0;background:none;overflow:visible}
+.proxy-row>.editor-panel-header::after{display:none}
+.proxy-row .editor-panel-title{gap:10px;min-width:0;flex:0 1 auto}
+.proxy-row .editor-panel-title h3,.proxy-row .chain-hop-header h3{overflow-wrap:anywhere}
+.proxy-row.chain-hop>.editor-panel-header{grid-column:1;flex-wrap:nowrap}
+.proxy-row>.editor-panel-body:not(.route-choice-line),.proxy-row .proxy-row-selector{grid-column:1/-1;grid-row:2;min-width:0;padding:0}
+.proxy-row .route-choice-line,.proxy-row .route-selection-meta{display:contents}
+.proxy-row .route-trigger{min-height:48px;padding:10px 14px}
+.proxy-row>.chain-hop-state{display:none}
+.proxy-row>.chain-remove{grid-column:2;grid-row:1;align-self:center;justify-self:end;width:34px;height:34px;min-width:34px;border:1px solid var(--control-outline);border-radius:9px;padding:0;background:var(--aurora-soft-glass);color:var(--accent);font-family:inherit;font-size:24px;font-weight:650;line-height:1;box-shadow:0 2px 6px #23478018;cursor:pointer}
+.proxy-row>.chain-remove:hover{background:color-mix(in srgb,var(--danger) 12%,var(--surface));border-color:var(--danger);color:var(--danger)}.proxy-row>.chain-remove:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.proxy-row .route-source{grid-column:1/-1;grid-row:3;min-width:0;margin:0;font-size:12px;line-height:1.5;overflow-wrap:anywhere}
+.proxy-row .route-selection-meta .chain{grid-column:1/-1;grid-row:4;min-width:0;margin:0;padding:6px 0 0;border:0;border-top:1px solid var(--border);font-size:12px;line-height:1.5;overflow-wrap:anywhere}
+.proxy-workspace:not(.without-companion) .route-selection-meta .chain{display:none}
+.proxy-row .chain-exit-role{margin-left:0;min-height:28px;padding:3px 8px;font-size:12px;line-height:20px}
+.predecessor-section.proxy-row .predecessor-panel{display:contents}
+.predecessor-section.proxy-row .predecessor-mode-field{grid-column:1/-1;grid-row:2;display:block;min-width:0;margin:0}
+.predecessor-section.proxy-row .predecessor-node-field{grid-column:1/-1;grid-row:3;display:grid;grid-template-columns:minmax(0,1fr);gap:8px;min-width:0;margin:0}
+.predecessor-section.proxy-row .predecessor-node-field>.field-label{padding:0;font-size:13px}
+.predecessor-section.proxy-row .panel-info{grid-column:1/-1;grid-row:4;min-width:0;margin:0;padding:8px 0 0;border:0;border-top:1px solid var(--border);border-radius:0;box-shadow:none;background:none;font-size:12px;line-height:1.5}
+.predecessor-section.proxy-row:not(:has(.predecessor-node-field:not([hidden]))) .panel-info{grid-row:3}
+.profile-editor .editor-heading{min-height:86px;margin-bottom:16px}
+.profile-editor .editor-actions{margin-top:20px;padding-top:18px}
+.profile-editor:has(.proxy-workspace) .editor-actions{justify-content:flex-end}
+.profile-editor:has(.proxy-workspace) .editor-actions .danger-text{margin:0 auto 0 0}
+.proxy-config-column>.advanced{margin:0}
+.proxy-config-column>.advanced>summary{min-height:50px;padding:12px 18px}
+.proxy-path-preview{overflow:visible}
+.proxy-path-preview>.editor-panel-header{min-height:64px;padding:12px 18px}
+.proxy-path-preview>.editor-panel-header h3{margin:0;font-size:21px;font-weight:720;line-height:1.4}
+.proxy-path-list{list-style:none;margin:0;padding:18px;display:grid;gap:0}
+.proxy-path-item{position:relative;display:grid;grid-template-columns:34px 96px minmax(0,1fr) 132px;gap:10px;align-items:center;min-width:0;min-height:76px;padding:10px 0}
+.proxy-path-item:not(:last-child)::after{content:'';position:absolute;left:17px;top:58px;bottom:-10px;width:1px;border-left:1px dashed var(--panel-edge);pointer-events:none}
+.proxy-path-icon{grid-column:1;grid-row:1;display:flex;align-items:center;justify-content:center;align-self:center;width:34px;height:34px;color:var(--accent);border:1px solid var(--panel-highlight);border-radius:10px;background:var(--aurora-soft-glass);box-shadow:var(--panel-shadow);z-index:1}
+.proxy-path-icon .panel-icon{width:auto;height:auto;min-width:0;border:0;background:none;box-shadow:none;padding:0}
+.proxy-path-icon svg{width:22px;height:22px}
+.proxy-path-copy{display:contents}
+.proxy-path-role{grid-column:2;grid-row:1;display:block;margin:0;min-width:0;align-self:center;font-size:13px;font-weight:650;line-height:1.4;color:var(--support-ink,var(--muted));overflow-wrap:anywhere}
+.proxy-path-name{grid-column:3;grid-row:1;display:flex;align-items:center;gap:8px;margin:0;min-width:0;align-self:center;font-size:14px;font-weight:650;line-height:1.45;color:var(--text);overflow-wrap:anywhere}
+.proxy-path-state{grid-column:4;grid-row:1;display:flex;justify-content:flex-start;align-items:center;min-height:40px;min-width:0;padding:6px 8px;border-radius:9px;background:color-mix(in srgb,var(--surface) 32%,transparent);font-size:12px;font-weight:600;line-height:1.45;text-align:left;font-variant-numeric:tabular-nums;color:var(--muted);overflow-wrap:anywhere}
+.proxy-path-flag{display:block;width:22px;height:17px;object-fit:contain;flex:none}
+.proxy-path-node-label{min-width:0;overflow-wrap:anywhere}
+.proxy-path-item:not([data-path-kind=local]) .proxy-path-name:not(:has(.proxy-path-flag))::before{content:"";width:22px;flex:none}
+.proxy-path-state:empty{visibility:hidden}
+.proxy-path-item[data-path-kind=local] .proxy-path-name{font-variant-numeric:tabular-nums;color:var(--accent)}
+.proxy-path-item[data-chain-state=ok] .proxy-path-state{color:#178555}
+.proxy-path-item[data-chain-state=error] .proxy-path-state{color:#c64460}
+.proxy-path-item[data-chain-state=error] .proxy-path-icon{border-color:#df6078}
+.proxy-path-item[data-chain-state=blocked]{opacity:.7}
+.proxy-path-item[data-chain-state=checking] .proxy-path-state{color:var(--accent)}
+.proxy-path-unresolved{margin:0 18px 16px;font-size:12px;line-height:1.6;color:var(--muted);overflow-wrap:anywhere}
+.proxy-path-unresolved:empty{display:none}
+.proxy-path-footer{margin:0 18px;padding:12px 0 16px;border-top:1px solid var(--border)}
+.proxy-path-footer:has(>.proxy-path-actions[hidden]):not(:has(.chain-test-status:not(:empty))){display:none}
+.proxy-path-actions{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:8px}
+.proxy-path-actions .button{min-height:40px;font-size:14px;padding:8px 14px}
+.proxy-path-footer .chain-test-status{font-size:12px;line-height:1.5;margin:10px 0 0;overflow-wrap:anywhere}
+.chain-exit-role{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:32px;font-size:14px;font-weight:700;line-height:20px;color:#ac2451;background:linear-gradient(135deg,#fff9fb,#ffe0eb);border:1px solid #e8a0b8;padding:5px 11px;border-radius:10px;margin-left:6px;white-space:nowrap;box-shadow:0 2px 7px #b83b6414,inset 0 1px 0 #fff}.chain-exit-role svg{width:16px;height:16px;flex:none}.chain-test-status{font-size:12px;color:var(--muted);margin:6px 0}.chain-test-status:empty{display:none}
+.editor-panel[data-chain-state=error]{border-color:#df6078;box-shadow:0 0 0 2px #df607820}.editor-panel[data-chain-state=blocked]{opacity:.7}.editor-panel[data-chain-state=checking]{border-color:var(--accent)}
+:root[data-theme=dark] .chain-exit-role{background:linear-gradient(135deg,#472b42,#65334e);color:#ffd0df;border-color:#a75b7a;box-shadow:0 2px 7px #0002,inset 0 1px 0 #ffffff18}:root[data-theme=dark] .proxy-path-item[data-chain-state=error] .proxy-path-state{color:#ffabc2}:root[data-theme=dark] .proxy-path-item[data-chain-state=ok] .proxy-path-state{color:#6bd7aa}
+@media(prefers-color-scheme:dark){:root[data-theme=auto] .chain-exit-role{background:linear-gradient(135deg,#472b42,#65334e);color:#ffd0df;border-color:#a75b7a;box-shadow:0 2px 7px #0002,inset 0 1px 0 #ffffff18}:root[data-theme=auto] .proxy-path-item[data-chain-state=error] .proxy-path-state{color:#ffabc2}:root[data-theme=auto] .proxy-path-item[data-chain-state=ok] .proxy-path-state{color:#6bd7aa}}
+/* Mode controls move together above the two-column editor. */
+.profile-chain-actions{display:flex;flex:0 1 auto;min-width:0}
+.profile-chain-actions .chain-mode-actions{display:flex;flex-wrap:nowrap;align-items:stretch;gap:4px;margin:0;padding:5px;border:1px solid var(--panel-edge);border-radius:15px;background:var(--accent-soft);box-shadow:inset 0 1px 0 var(--panel-highlight)}
+.profile-chain-actions .button{min-height:44px;min-width:0;margin:0;padding:10px 14px;font-size:14px;font-weight:600;line-height:1.3;border-radius:10px;white-space:nowrap}
+.profile-chain-actions .chain-mode-actions .button{min-height:42px;padding:9px 16px;border:1px solid transparent;background:transparent;box-shadow:none}
+.profile-chain-actions .chain-mode-actions .button[aria-pressed=true]{border-color:var(--panel-edge);background:var(--panel-glass);box-shadow:var(--panel-shadow),inset 0 1px 0 var(--panel-highlight)}
+.profile-chain-actions .chain-mode-actions .button:hover{background:var(--panel-glass)}
+.chain-toolbar[hidden],.chain-editor[hidden],.profile-chain-actions[hidden],.chain-exit-role[hidden]{display:none}
+@container profile-editor (max-width:1000px){.proxy-workspace{grid-template-columns:minmax(0,1fr)}.proxy-workspace-toolbar{grid-column:1}.proxy-path-preview .proxy-path-item{grid-template-columns:34px 110px minmax(0,1fr) 170px}}
+@container profile-editor (max-width:560px){
+ .proxy-workspace{gap:14px}.proxy-row{gap:8px;padding:12px}
+ .proxy-row>.editor-panel-header{gap:5px 8px}.proxy-row .editor-panel-title{gap:8px}
+ .proxy-row .panel-icon{width:34px;height:34px;border-radius:9px}.proxy-row .panel-icon .ui-icon{width:23px;height:23px}
+ .proxy-row .chain-exit-role{min-height:26px;font-size:12px;padding:2px 7px}
+ .proxy-row .chain-exit-role svg{width:14px;height:14px}
+ .chain-toolbar{gap:8px}.chain-toolbar h3{font-size:20px}.chain-toolbar .button{padding-inline:10px;font-size:13px}
+ .profile-chain-actions{width:100%}.profile-chain-actions .chain-mode-actions{width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+ .profile-chain-actions .chain-mode-actions .button{padding:9px 6px;font-size:13px;white-space:normal;min-height:44px}
+ .proxy-path-list{padding:12px}.proxy-path-preview>.editor-panel-header{padding:12px;min-height:56px}.proxy-path-preview .proxy-path-item{grid-template-columns:34px 80px minmax(0,1fr) 112px;gap:8px}
+ .proxy-path-footer{margin-inline:12px}.proxy-path-unresolved{margin-inline:12px}
+}
+@container profile-editor (max-width:480px){.chain-hop-header h3,.proxy-path-preview>.editor-panel-header h3{font-size:17px}}
+@container profile-editor (max-width:400px){.proxy-path-preview .proxy-path-item{grid-template-columns:28px 66px minmax(0,1fr) 100px;gap:8px}.proxy-path-icon{width:28px;height:30px}.proxy-path-item:not(:last-child)::after{left:14px}.proxy-path-role{font-size:12px}.proxy-path-name{font-size:13px;gap:5px}.proxy-path-state{padding-inline:5px}.proxy-path-flag,.proxy-path-name:not(:has(.proxy-path-flag))::before{width:19px}}
+@container profile-editor (max-width:720px){.editor-heading .profile-heading-name{flex-basis:190px}}
+

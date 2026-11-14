@@ -1,0 +1,10 @@
+{
+  "product_id": "v2route",
+  "name": "Proxy V2Route",
+  "version": "1.2.43",
+  "host_name": "local.v2route",
+  "chrome_id": "gkcdkddpmeklphcmdcnijondipndjhba",
+  "firefox_id": "v2route@v2route.local",
+  "platform": "Windows 10/11 x64",
+  "store_status": "not-submitted"
+}

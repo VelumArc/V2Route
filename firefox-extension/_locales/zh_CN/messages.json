@@ -1,0 +1,5 @@
+{
+  "appDescription": {
+    "message": "浏览器独立选线，无需切换 v2rayN 主线路。支持自有 VMess/VLESS 节点，节点线路需 Windows 本地组件。"
+  }
+}

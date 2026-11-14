@@ -1,0 +1,1530 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 1,
+  "metadata": {
+    "component": {
+      "type": "application",
+      "name": "Xray-core",
+      "version": "v26.10.31",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d5b558191cccb1e92a5772b68b8cab67717b26f634b0f15153215f65ae982a7e"
+        }
+      ],
+      "bom-ref": "Xray-core"
+    },
+    "properties": [
+      {
+        "name": "completeness",
+        "value": "linked modules complete"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "github.com/andybalholm/brotli",
+      "version": "v1.2.3",
+      "bom-ref": "pkg:golang/github.com/andybalholm/brotli@v1.2.3",
+      "purl": "pkg:golang/github.com/andybalholm/brotli@v1.2.3",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "3017c784cffc7f0019a6573efcb6d861be4bd08e2072532a88ff39280f3ec15c"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/github.com/andybalholm/brotli/@v/v1.2.3.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:8H1qwOkl2LPfjf3YezB90JnCliZb6SInJ/OJkEbA5NQ="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/c39d4ba59a95379087f5/001-LICENSE,dependencies/c39d4ba59a95379087f5/002-LICENSE"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/apernet/quic-go",
+      "version": "v0.61.1-0.20260806010916-184d081eef3e",
+      "bom-ref": "pkg:golang/github.com/apernet/quic-go@v0.61.1-0.20260806010916-184d081eef3e",
+      "purl": "pkg:golang/github.com/apernet/quic-go@v0.61.1-0.20260806010916-184d081eef3e",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "44106844bd31ddc1abadb584e6e99e8c033625a9444af727a22600f3c10af861"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/github.com/apernet/quic-go/@v/v0.61.1-0.20260806010916-184d081eef3e.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:5mgtR5gwIgBKMiGI1QdXldZZ+SNor06Nbu1wCBulQBg="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/034086c762bf9acc794c/001-LICENSE,dependencies/034086c762bf9acc794c/002-LICENSE.md"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/ghodss/yaml",
+      "version": "v1.0.1-0.20220118164431-d8423dcdf344",
+      "bom-ref": "pkg:golang/github.com/ghodss/yaml@v1.0.1-0.20220118164431-d8423dcdf344",
+      "purl": "pkg:golang/github.com/ghodss/yaml@v1.0.1-0.20220118164431-d8423dcdf344",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "bf6c7a9ec0ec0d8a304ed21255824fda80debf351f28185e8997c587932d6689"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/github.com/ghodss/yaml/@v/v1.0.1-0.20220118164431-d8423dcdf344.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:Arcl6UOIS/kgO2nW3A65HN+7CMjSDP/gofXL4CZt1V4="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/7420ed539bc5ed99eebb/001-LICENSE"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/google/gopacket",
+      "version": "v1.1.19",
+      "bom-ref": "pkg:golang/github.com/google/gopacket@v1.1.19",
+      "purl": "pkg:golang/github.com/google/gopacket@v1.1.19",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "fc8cbe2239683199e677cb39f9303ae8d4a365f3c8cd8a2dcfa1f14c41bcff88"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/github.com/google/gopacket/@v/v1.1.19.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:ves8RnFZPGiFnTS0uPQStjwru6uO6h+nlr9j6fL7kF8="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/edbe9e0ca15e2673fb1f/001-AUTHORS,dependencies/edbe9e0ca15e2673fb1f/002-LICENSE"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/google/uuid",
+      "version": "v1.6.0",
+      "bom-ref": "pkg:golang/github.com/google/uuid@v1.6.0",
+      "purl": "pkg:golang/github.com/google/uuid@v1.6.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d0f02f377217f42702e259684e06441edbf5140dddcc34ba9bea56038b38a6ed"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/github.com/google/uuid/@v/v1.6.0.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/d0d666767bf9063c153c/001-LICENSE"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/gorilla/websocket",
+      "version": "v1.5.3",
+      "bom-ref": "pkg:golang/github.com/gorilla/websocket@v1.5.3",
+      "purl": "pkg:golang/github.com/gorilla/websocket@v1.5.3",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "dbbd31dd0f08548c5dc43e4c2f12bbba66abff5252b224b1cd06afbb72783a76"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/github.com/gorilla/websocket/@v/v1.5.3.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:saDtZ6Pbx/0u+bgYQ3q96pZgCzfhKXGPqt7kZ72aNNg="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/11713a1d2b26e712ee33/001-AUTHORS,dependencies/11713a1d2b26e712ee33/002-LICENSE"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/huin/goupnp",
+      "version": "v1.2.0",
+      "bom-ref": "pkg:golang/github.com/huin/goupnp@v1.2.0",
+      "purl": "pkg:golang/github.com/huin/goupnp@v1.2.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "e3c2e533eaf2ed64cb20b222cf47030c901b67c52ff4ae8c7c7260fffe9580d7"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/github.com/huin/goupnp/@v/v1.2.0.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:uOKW26NG1hsSSbXIZ1IR7XP9Gjd1U8pnLaCMgntmkmY="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/6caf6db7a6a8b90834b2/001-LICENSE"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/jackpal/go-nat-pmp",
+      "version": "v1.0.2",
+      "bom-ref": "pkg:golang/github.com/jackpal/go-nat-pmp@v1.0.2",
+      "purl": "pkg:golang/github.com/jackpal/go-nat-pmp@v1.0.2",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "f778f0f492597d7158e2d6abbac3850bdf8a669c296790eba85c95152872ddfb"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/github.com/jackpal/go-nat-pmp/@v/v1.0.2.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:KzKSgb7qkJvOUTqYl9/Hg/me3pWgBmERKrTGD7BdWus="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/95a38a8961e41ffe0aee/001-LICENSE"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/juju/ratelimit",
+      "version": "v1.0.2",
+      "bom-ref": "pkg:golang/github.com/juju/ratelimit@v1.0.2",
+      "purl": "pkg:golang/github.com/juju/ratelimit@v1.0.2",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "881dd22b8ec7dadbbb1e9d08ed7eb2c1f1ce8b6b4c48f739bb65f4c7d2ec12ed"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/github.com/juju/ratelimit/@v/v1.0.2.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:sRxmtRiajbvrcLQT7S+JbqU0ntsb9W2yhSdNN8tWfaI="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/91035c95a572f3677a4a/001-LICENSE"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/klauspost/compress",
+      "version": "v1.20.0",
+      "bom-ref": "pkg:golang/github.com/klauspost/compress@v1.20.0",
+      "purl": "pkg:golang/github.com/klauspost/compress@v1.20.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "a04654d049a3caf33bcb60ee45efd8ccecabb93eb8be88045ed0003b0ecb5773"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/github.com/klauspost/compress/@v/v1.20.0.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:a3C1ke2ohxFymNlb2HWAHjDeKCI90scRskErZkR0ezA="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/ce0bd03b174b9adc0571/001-LICENSE,dependencies/ce0bd03b174b9adc0571/002-LICENSE,dependencies/ce0bd03b174b9adc0571/003-LICENSE,dependencies/ce0bd03b174b9adc0571/004-LICENSE,dependencies/ce0bd03b174b9adc0571/005-LICENSE,dependencies/ce0bd03b174b9adc0571/006-LICENSE,dependencies/ce0bd03b174b9adc0571/007-LICENSE,dependencies/ce0bd03b174b9adc0571/008-AUTHORS,dependencies/ce0bd03b174b9adc0571/009-LICENSE,dependencies/ce0bd03b174b9adc0571/010-LICENSE,dependencies/ce0bd03b174b9adc0571/011-LICENSE.txt"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/klauspost/cpuid/v2",
+      "version": "v2.4.1",
+      "bom-ref": "pkg:golang/github.com/klauspost/cpuid/v2@v2.4.1",
+      "purl": "pkg:golang/github.com/klauspost/cpuid/v2@v2.4.1",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "e882fb8121e3daec9ecb51908b8c62642b458546df13195dbc41baf0df50eb64"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/github.com/klauspost/cpuid/v2/@v/v2.4.1.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:I9KxadAkvo+QjtcEE2f2tyfEvmIla/T0m+14PrZNl0U="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/ce20fcbc10c33cc865ef/001-LICENSE"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/koron/go-ssdp",
+      "version": "v0.0.4",
+      "bom-ref": "pkg:golang/github.com/koron/go-ssdp@v0.0.4",
+      "purl": "pkg:golang/github.com/koron/go-ssdp@v0.0.4",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "4a4c4a048c0ac4632d8e9f0be4fd64804a2cb872e660be4b79d83a29bc347ad4"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/github.com/koron/go-ssdp/@v/v0.0.4.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:1IDwrghSKYM7yLf7XCzbByg2sJ/JcNOZRXS2jczTwz0="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/3fd5a8ea83e3592e29be/001-LICENSE"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/libp2p/go-nat",
+      "version": "v1.0.1-0.20250821073202-01afc089f138",
+      "bom-ref": "pkg:golang/github.com/libp2p/go-nat@v1.0.1-0.20250821073202-01afc089f138",
+      "purl": "pkg:golang/github.com/libp2p/go-nat@v1.0.1-0.20250821073202-01afc089f138",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "88d5bf91c45e056adb4bc4763fda3260b70d6c6f70d7bf758eb6b1d5e35aa0df"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/github.com/libp2p/go-nat/@v/v1.0.1-0.20250821073202-01afc089f138.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:YohuNPT/1k3VcThCQlBZ43PCPWPfMRS1zcxWBF2SLK8="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/f32ef6a2b1a768774161/001-LICENSE"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/libp2p/go-netroute",
+      "version": "v0.2.1",
+      "bom-ref": "pkg:golang/github.com/libp2p/go-netroute@v0.2.1",
+      "purl": "pkg:golang/github.com/libp2p/go-netroute@v0.2.1",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "65067a36378b786df40a578bf4450269c4371cf415123c71c0847df0062b8ebd"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/github.com/libp2p/go-netroute/@v/v0.2.1.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:V8kVrpD8GK0Riv15/7VN6RbUQ3URNZVosw7H2v9tksU="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/0d474b3a0777cd75c245/001-LICENSE"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/miekg/dns",
+      "version": "v1.1.73",
+      "bom-ref": "pkg:golang/github.com/miekg/dns@v1.1.73",
+      "purl": "pkg:golang/github.com/miekg/dns@v1.1.73",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "bbed3c53b503db53002598615bf9bdb59918a6f9d72bd9151e0c52ab19e22a6f"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/github.com/miekg/dns/@v/v1.1.73.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:uhT8nJxmTrPJYClxVxTCX+CVn6qnzSiybRk72Z6DgrE="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/6732e5474795d3b8f72d/001-AUTHORS,dependencies/6732e5474795d3b8f72d/002-COPYRIGHT,dependencies/6732e5474795d3b8f72d/003-LICENSE"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/pelletier/go-toml",
+      "version": "v1.9.5",
+      "bom-ref": "pkg:golang/github.com/pelletier/go-toml@v1.9.5",
+      "purl": "pkg:golang/github.com/pelletier/go-toml@v1.9.5",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "de3dcda660cc800cd86d03273a25956d67f416e8fcbe4d2001a2cb4a01e6ac60"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/github.com/pelletier/go-toml/@v/v1.9.5.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:4yBQzkHv+7BHq2PQUZF3Mx0IYxG7LsP222s7Agd3ve8="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/26cd11d8f7dd9769ec23/001-LICENSE"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/pion/dtls/v3",
+      "version": "v3.1.5",
+      "bom-ref": "pkg:golang/github.com/pion/dtls/v3@v3.1.5",
+      "purl": "pkg:golang/github.com/pion/dtls/v3@v3.1.5",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "447358c3191774c809538a061ecb89effb4a7257b22213e19f35a62faa37cdf5"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/github.com/pion/dtls/v3/@v/v3.1.5.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:9xJtVsHwMYeSjPp5Hh1FTis4DchnQWtnOa5o+6ygqfc="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/46acf01b55524bbca873/001-LICENSE"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/pion/logging",
+      "version": "v0.2.4",
+      "bom-ref": "pkg:golang/github.com/pion/logging@v0.2.4",
+      "purl": "pkg:golang/github.com/pion/logging@v0.2.4",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "b904074dd76009e71b4e4e0e004a2c7862bff0a8690b4f47410c46b172b3830c"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/github.com/pion/logging/@v/v0.2.4.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:tTew+7cmQ+Mc1pTBLKH2puKsOvhm32dROumOZ655zB8="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/09ec936727821e129f88/001-LICENSE"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/pion/stun/v3",
+      "version": "v3.1.7",
+      "bom-ref": "pkg:golang/github.com/pion/stun/v3@v3.1.7",
+      "purl": "pkg:golang/github.com/pion/stun/v3@v3.1.7",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "9096c3c12dd2cb97c965ef8e9c5aec6749809d76e64e4dd0d71e31c7c44192d2"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/github.com/pion/stun/v3/@v/v3.1.7.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:uRXMTlGLf89WgItGNyZ6aR5jMTX0NBbybXADpQCzn+E="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/ef47503c10449beeb552/001-LICENSE"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/pion/transport/v4",
+      "version": "v4.1.0",
+      "bom-ref": "pkg:golang/github.com/pion/transport/v4@v4.1.0",
+      "purl": "pkg:golang/github.com/pion/transport/v4@v4.1.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "bfc599df6ff39bceffb538cb244ab8999c1026fcb3b287462163f33fd127a728"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/github.com/pion/transport/v4/@v/v4.1.0.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:8S+nF2reM2cJuqC6g78OVy2BBgmbdns+acx3jA97BvQ="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/4896d6dae59581175cd6/001-LICENSE"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/pires/go-proxyproto",
+      "version": "v0.16.0",
+      "bom-ref": "pkg:golang/github.com/pires/go-proxyproto@v0.16.0",
+      "purl": "pkg:golang/github.com/pires/go-proxyproto@v0.16.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "f32871a7ca8d6a0d09f700962bc9489f98f410cb0c32581e6da7b67d2eaba309"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/github.com/pires/go-proxyproto/@v/v0.16.0.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:9KYT/fM3wpjT8bdMEj/7FBcoiUG1KyzEjRYnPu+vz7A="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/6e4762b969cb8fefd821/001-LICENSE"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/quic-go/qpack",
+      "version": "v0.6.0",
+      "bom-ref": "pkg:golang/github.com/quic-go/qpack@v0.6.0",
+      "purl": "pkg:golang/github.com/quic-go/qpack@v0.6.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "3ac037cd1747420bc00bd6a793b4b197a2359fc354de12dc2187477417564914"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/github.com/quic-go/qpack/@v/v0.6.0.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:g7W+BMYynC1LbYLSqRt8PBg5Tgwxn214ZZR34VIOjz8="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/1c4377cde23f013a5fa3/001-LICENSE.md"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/refraction-networking/utls",
+      "version": "v1.8.3-0.20260301010127-aa6edf4b11af",
+      "bom-ref": "pkg:golang/github.com/refraction-networking/utls@v1.8.3-0.20260301010127-aa6edf4b11af",
+      "purl": "pkg:golang/github.com/refraction-networking/utls@v1.8.3-0.20260301010127-aa6edf4b11af",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "e63da2f09ca0cd280e8b6a5cfe06cb790076df757efbc58f047d28847f50901e"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/github.com/refraction-networking/utls/@v/v1.8.3-0.20260301010127-aa6edf4b11af.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:er2acxbi3N1nvEq6HXHUAR1nTWEJmQfqiGR8EVT9rfs="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/ad5d538e57d1e2616514/001-LICENSE,dependencies/ad5d538e57d1e2616514/002-LICENSE"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/robfig/cron/v3",
+      "version": "v3.0.1",
+      "bom-ref": "pkg:golang/github.com/robfig/cron/v3@v3.0.1",
+      "purl": "pkg:golang/github.com/robfig/cron/v3@v3.0.1",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ebe6454642220832a451b8cc50eae5f9150fd8d36b90b242a5de27676be86c70"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/github.com/robfig/cron/v3/@v/v3.0.1.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:WdRxkvbJztn8LMz/QEvLN5sBU+xKpSqwwUO1Pjr4qDs="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/0a793cbc3aadb5ea4e8f/001-LICENSE"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/wlynxg/anet",
+      "version": "v0.0.5",
+      "bom-ref": "pkg:golang/github.com/wlynxg/anet@v0.0.5",
+      "purl": "pkg:golang/github.com/wlynxg/anet@v0.0.5",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "5d6e471ccaa553e0cac56e17f8e44499f99ca1a1e37d80d5fdb3c64d4d50d02a"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/github.com/wlynxg/anet/@v/v0.0.5.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:J3VJGi1gvo0JwZ/P1/Yc/8p63SoW98B5dHkYDmpgvvU="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/06e29a1706cb774e7899/001-LICENSE"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/xtls/reality",
+      "version": "v0.0.0-20261014101318-83f621788ca8",
+      "bom-ref": "pkg:golang/github.com/xtls/reality@v0.0.0-20261014101318-83f621788ca8",
+      "purl": "pkg:golang/github.com/xtls/reality@v0.0.0-20261014101318-83f621788ca8",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "f38aa2ac9cd2f9b57bc4838aec2870505583f00bbcf1a7ce825c1ad809ce1a18"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/github.com/xtls/reality/@v/v0.0.0-20261014101318-83f621788ca8.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:RjLnVvlzK4q6zWaSBPNRGsrgx2fbJDeUWffjw574uzs="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/d60751bca270a990657c/001-LICENSE,dependencies/d60751bca270a990657c/002-LICENSE-Go"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "github.com/yuin/gopher-lua",
+      "version": "v1.1.2",
+      "bom-ref": "pkg:golang/github.com/yuin/gopher-lua@v1.1.2",
+      "purl": "pkg:golang/github.com/yuin/gopher-lua@v1.1.2",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "7f7008875ea6784d67236c4598961001b546db2ec25ec19614619c83855681fd"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/github.com/yuin/gopher-lua/@v/v1.1.2.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:yF/FjE3hD65tBbt0VXLE13HWS9h34fdzJmrWRXwobGA="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/fc640ec77c5431c92c89/001-LICENSE"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "go4.org/netipx",
+      "version": "v0.0.0-20231129151722-fdeea329fbba",
+      "bom-ref": "pkg:golang/go4.org/netipx@v0.0.0-20231129151722-fdeea329fbba",
+      "purl": "pkg:golang/go4.org/netipx@v0.0.0-20231129151722-fdeea329fbba",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "e15f57de368c92b826010181906f26112ba3a0d7fde7d94c8a8c60c525dc4044"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/go4.org/netipx/@v/v0.0.0-20231129151722-fdeea329fbba.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:0b9z3AuHCjxk0x/opv64kcgZLBseWJUpBw5I82+2U4M="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/f066bcb2a6a3f58e4cee/001-AUTHORS,dependencies/f066bcb2a6a3f58e4cee/002-LICENSE"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "golang.org/x/crypto",
+      "version": "v0.58.0",
+      "bom-ref": "pkg:golang/golang.org/x/crypto@v0.58.0",
+      "purl": "pkg:golang/golang.org/x/crypto@v0.58.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "b0a45594cda20ddb4264d84aeff9b588b8570bf6a2833c51a0b821734a298d95"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/golang.org/x/crypto/@v/v0.58.0.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:COkYLr4k7nDI4r6QtMML2AfzeIswWHAJthLS6K/M/54="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/4182e4eea1eec26c97f1/001-LICENSE,dependencies/4182e4eea1eec26c97f1/002-PATENTS"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "golang.org/x/crypto/x509roots/fallback",
+      "version": "v0.0.0-20261020153306-9f2b28d4331a",
+      "bom-ref": "pkg:golang/golang.org/x/crypto/x509roots/fallback@v0.0.0-20261020153306-9f2b28d4331a",
+      "purl": "pkg:golang/golang.org/x/crypto/x509roots/fallback@v0.0.0-20261020153306-9f2b28d4331a",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "23a2f7fd5e693c276e8920ea60d7ed2c977d5f66dd933e6f0d021812e1964ed7"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/golang.org/x/crypto/x509roots/fallback/@v/v0.0.0-20261020153306-9f2b28d4331a.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:V5oicZXS0oqZx30gY/apgSVD7YvNBfrIOdcMnlelJY4="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/167b40a24f3b0a9259c9/001-LICENSE"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "golang.org/x/exp",
+      "version": "v0.0.0-20240506185415-9bf2ced13842",
+      "bom-ref": "pkg:golang/golang.org/x/exp@v0.0.0-20240506185415-9bf2ced13842",
+      "purl": "pkg:golang/golang.org/x/exp@v0.0.0-20240506185415-9bf2ced13842",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "6b4a2c206c65da1945186e59b9fdf8da26f13db40ee18a37f963c6ea053a665c"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/golang.org/x/exp/@v/v0.0.0-20240506185415-9bf2ced13842.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:vr/HnozRka3pE4EsMEg1lgkXJkTFJCVUX+S/ZT6wYzM="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/9e32360a14b2887799cf/001-LICENSE,dependencies/9e32360a14b2887799cf/002-PATENTS"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "golang.org/x/net",
+      "version": "v0.61.0",
+      "bom-ref": "pkg:golang/golang.org/x/net@v0.61.0",
+      "purl": "pkg:golang/golang.org/x/net@v0.61.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "f6843a98d608298e48a6ca287292c9a6fae066284050ce174d5ffb781c9b3dcf"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/golang.org/x/net/@v/v0.61.0.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:RR+6j/BTBCrggOLugxa+66R8FvoN6MHlzDlZIbN9YFw="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/0c902f72afbf52366fcc/001-LICENSE,dependencies/0c902f72afbf52366fcc/002-PATENTS"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "golang.org/x/sync",
+      "version": "v0.24.0",
+      "bom-ref": "pkg:golang/golang.org/x/sync@v0.24.0",
+      "purl": "pkg:golang/golang.org/x/sync@v0.24.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ca3fcf3ea8259e75891f7947e1a816a5b89402c542d45d8bbbd9e061b0c58019"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/golang.org/x/sync/@v/v0.24.0.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:iqiDrGoDgyuvAKrhLQthUEzU/R378N78gXbBjxed7oA="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/9597364879e5b1d54c46/001-LICENSE,dependencies/9597364879e5b1d54c46/002-PATENTS"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "golang.org/x/sys",
+      "version": "v0.49.0",
+      "bom-ref": "pkg:golang/golang.org/x/sys@v0.49.0",
+      "purl": "pkg:golang/golang.org/x/sys@v0.49.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "e73a06591ca0d7016ce3ccb45c36a8ed7128468aecc1a357f94d815c760c6b31"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/golang.org/x/sys/@v/v0.49.0.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:XbzkgYJHdqh/8m2Uu0W/dQv8nktxx4BFHp1M0gROTXA="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/1e7b1aaf85f9116b3cf9/001-LICENSE,dependencies/1e7b1aaf85f9116b3cf9/002-PATENTS"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "golang.org/x/text",
+      "version": "v0.43.0",
+      "bom-ref": "pkg:golang/golang.org/x/text@v0.43.0",
+      "purl": "pkg:golang/golang.org/x/text@v0.43.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "b75131f628f6e2e4892fd638d33127e952a5027775e0162b94ba069cb4e13863"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/golang.org/x/text/@v/v0.43.0.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:1QivrlhwAsnMOcqgOdl9my7s9OyZl8O5/UGUTJVXoWc="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/0d1e2d67ae64f2b5ca5c/001-LICENSE,dependencies/0d1e2d67ae64f2b5ca5c/002-PATENTS"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "golang.zx2c4.com/wintun",
+      "version": "v0.0.0-20230126152724-0fa3db229ce2",
+      "bom-ref": "pkg:golang/golang.zx2c4.com/wintun@v0.0.0-20230126152724-0fa3db229ce2",
+      "purl": "pkg:golang/golang.zx2c4.com/wintun@v0.0.0-20230126152724-0fa3db229ce2",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "06599222daa6af8547045c446cefa9a2bab19d57bde1fc6436114308d79a2b4b"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/golang.zx2c4.com/wintun/@v/v0.0.0-20230126152724-0fa3db229ce2.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:B82qJJgjvYKsXS9jeunTOisW56dUokqW/FOteYJJ/yg="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/064e3bbb0855073032b5/001-LICENSE"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "golang.zx2c4.com/wireguard",
+      "version": "v0.0.0-20250521234502-f333402bd9cb",
+      "bom-ref": "pkg:golang/golang.zx2c4.com/wireguard@v0.0.0-20250521234502-f333402bd9cb",
+      "purl": "pkg:golang/golang.zx2c4.com/wireguard@v0.0.0-20250521234502-f333402bd9cb",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "e40fbd4b585b8097e8d2577c2100c092f9844b44b09a6d6d640740e42e86f649"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/golang.zx2c4.com/wireguard/@v/v0.0.0-20250521234502-f333402bd9cb.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:whnFRlWMcXI9d+ZbWg+4sHnLp52d5yiIPUxMBSt4X9A="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/403b1287f06c9fd036bc/001-LICENSE"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "golang.zx2c4.com/wireguard/windows",
+      "version": "v1.1.1",
+      "bom-ref": "pkg:golang/golang.zx2c4.com/wireguard/windows@v1.1.1",
+      "purl": "pkg:golang/golang.zx2c4.com/wireguard/windows@v1.1.1",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "b4c3807f39a6c063bb8d07e12ee8e863a5da5b4de72cda6614f579d41fea0f0b"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/golang.zx2c4.com/wireguard/windows/@v/v1.1.1.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:8/H97U1v1PNDNcBsMZgU3KFuND9MQdTsU2NOwmCXArE="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/db849f7ec5132e5a729e/001-COPYING"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "google.golang.org/genproto/googleapis/rpc",
+      "version": "v0.0.0-20260706201446-f0a921348800",
+      "bom-ref": "pkg:golang/google.golang.org/genproto/googleapis/rpc@v0.0.0-20260706201446-f0a921348800",
+      "purl": "pkg:golang/google.golang.org/genproto/googleapis/rpc@v0.0.0-20260706201446-f0a921348800",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "42a0902eda416f038ae29a247e12a8932a566d8b18682ca8cd2d333a40c0f407"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/google.golang.org/genproto/googleapis/rpc/@v/v0.0.0-20260706201446-f0a921348800.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:qEHAMpSaUhtD0p3NbEEI83HwNGFxEwaSJ1G9PLnCBZE="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/ee65a5190aa3039784bc/001-LICENSE"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "google.golang.org/grpc",
+      "version": "v1.84.0",
+      "bom-ref": "pkg:golang/google.golang.org/grpc@v1.84.0",
+      "purl": "pkg:golang/google.golang.org/grpc@v1.84.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "a14bebefbac1ec115d9e1f8042006c185d65adf43a91644f3e58df0688831b95"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/google.golang.org/grpc/@v/v1.84.0.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:soMyaPJ8pAak5PIQ0DGBUir0XRo2fRoMqhNWMLlLxO0="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/c71063733de93b486d1d/001-AUTHORS,dependencies/c71063733de93b486d1d/002-LICENSE,dependencies/c71063733de93b486d1d/003-NOTICE.txt"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "google.golang.org/protobuf",
+      "version": "v1.36.12",
+      "bom-ref": "pkg:golang/google.golang.org/protobuf@v1.36.12",
+      "purl": "pkg:golang/google.golang.org/protobuf@v1.36.12",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "68f8a3174aff42950fd9bd02c11b45c6986eb8060508d124d1c3dd6bf86b9be6"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/google.golang.org/protobuf/@v/v1.36.12.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:pJOKDDOyeXErUroCihFAd5LQuwXBSpVnKGrj5o/fwxc="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/3a91b7c253011163a4d2/001-LICENSE,dependencies/3a91b7c253011163a4d2/002-PATENTS"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "gopkg.in/yaml.v2",
+      "version": "v2.4.0",
+      "bom-ref": "pkg:golang/gopkg.in/yaml.v2@v2.4.0",
+      "purl": "pkg:golang/gopkg.in/yaml.v2@v2.4.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ede49e27c4cca6cdd2ec719aed8ea4d363710cceb3d411e7a786fbdec0d391fd"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/gopkg.in/yaml.v2/@v/v2.4.0.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:D8xgwECY7CYvx+Y2n4sBz93Jn9JRvxdiyyo8CTfuKaY="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/2f0c4a1da39e5511cb54/001-LICENSE,dependencies/2f0c4a1da39e5511cb54/002-LICENSE.libyaml,dependencies/2f0c4a1da39e5511cb54/003-NOTICE"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "layeh.com/gopher-luar",
+      "version": "v1.0.11",
+      "bom-ref": "pkg:golang/layeh.com/gopher-luar@v1.0.11",
+      "purl": "pkg:golang/layeh.com/gopher-luar@v1.0.11",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "f782e0d530ab4f5eaed187c5531528b1ca2eee81618e18673d968c4bb8330cb2"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/layeh.com/gopher-luar/@v/v1.0.11.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:8zJudpKI6HWkoh9eyyNFaTM79PY6CAPcIr6X/KTiliw="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/ef265ced31469e1dc248/001-LICENSE"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "lukechampine.com/blake3",
+      "version": "v1.4.1",
+      "bom-ref": "pkg:golang/lukechampine.com/blake3@v1.4.1",
+      "purl": "pkg:golang/lukechampine.com/blake3@v1.4.1",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "b3a3338a6e830b79fb2ff1d263f07f3fe0adcfbafd04b65e5fe14415613e2e4d"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://proxy.golang.org/lukechampine.com/blake3/@v/v1.4.1.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "go:h1",
+          "value": "h1:I3Smz7gso8w4/TunLKec6K2fn+kyKtDxr/xcQEN84Wg="
+        },
+        {
+          "name": "notice-files",
+          "value": "dependencies/3026168c763cf0f70ccd/001-LICENSE"
+        },
+        {
+          "name": "license-review",
+          "value": "Original notice text provided; SPDX expression not asserted"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "Xray-core",
+      "dependsOn": [
+        "pkg:golang/github.com/andybalholm/brotli@v1.2.3",
+        "pkg:golang/github.com/apernet/quic-go@v0.61.1-0.20260806010916-184d081eef3e",
+        "pkg:golang/github.com/ghodss/yaml@v1.0.1-0.20220118164431-d8423dcdf344",
+        "pkg:golang/github.com/google/gopacket@v1.1.19",
+        "pkg:golang/github.com/google/uuid@v1.6.0",
+        "pkg:golang/github.com/gorilla/websocket@v1.5.3",
+        "pkg:golang/github.com/huin/goupnp@v1.2.0",
+        "pkg:golang/github.com/jackpal/go-nat-pmp@v1.0.2",
+        "pkg:golang/github.com/juju/ratelimit@v1.0.2",
+        "pkg:golang/github.com/klauspost/compress@v1.20.0",
+        "pkg:golang/github.com/klauspost/cpuid/v2@v2.4.1",
+        "pkg:golang/github.com/koron/go-ssdp@v0.0.4",
+        "pkg:golang/github.com/libp2p/go-nat@v1.0.1-0.20250821073202-01afc089f138",
+        "pkg:golang/github.com/libp2p/go-netroute@v0.2.1",
+        "pkg:golang/github.com/miekg/dns@v1.1.73",
+        "pkg:golang/github.com/pelletier/go-toml@v1.9.5",
+        "pkg:golang/github.com/pion/dtls/v3@v3.1.5",
+        "pkg:golang/github.com/pion/logging@v0.2.4",
+        "pkg:golang/github.com/pion/stun/v3@v3.1.7",
+        "pkg:golang/github.com/pion/transport/v4@v4.1.0",
+        "pkg:golang/github.com/pires/go-proxyproto@v0.16.0",
+        "pkg:golang/github.com/quic-go/qpack@v0.6.0",
+        "pkg:golang/github.com/refraction-networking/utls@v1.8.3-0.20260301010127-aa6edf4b11af",
+        "pkg:golang/github.com/robfig/cron/v3@v3.0.1",
+        "pkg:golang/github.com/wlynxg/anet@v0.0.5",
+        "pkg:golang/github.com/xtls/reality@v0.0.0-20261014101318-83f621788ca8",
+        "pkg:golang/github.com/yuin/gopher-lua@v1.1.2",
+        "pkg:golang/go4.org/netipx@v0.0.0-20231129151722-fdeea329fbba",
+        "pkg:golang/golang.org/x/crypto@v0.58.0",
+        "pkg:golang/golang.org/x/crypto/x509roots/fallback@v0.0.0-20261020153306-9f2b28d4331a",
+        "pkg:golang/golang.org/x/exp@v0.0.0-20240506185415-9bf2ced13842",
+        "pkg:golang/golang.org/x/net@v0.61.0",
+        "pkg:golang/golang.org/x/sync@v0.24.0",
+        "pkg:golang/golang.org/x/sys@v0.49.0",
+        "pkg:golang/golang.org/x/text@v0.43.0",
+        "pkg:golang/golang.zx2c4.com/wintun@v0.0.0-20230126152724-0fa3db229ce2",
+        "pkg:golang/golang.zx2c4.com/wireguard@v0.0.0-20250521234502-f333402bd9cb",
+        "pkg:golang/golang.zx2c4.com/wireguard/windows@v1.1.1",
+        "pkg:golang/google.golang.org/genproto/googleapis/rpc@v0.0.0-20260706201446-f0a921348800",
+        "pkg:golang/google.golang.org/grpc@v1.84.0",
+        "pkg:golang/google.golang.org/protobuf@v1.36.12",
+        "pkg:golang/gopkg.in/yaml.v2@v2.4.0",
+        "pkg:golang/layeh.com/gopher-luar@v1.0.11",
+        "pkg:golang/lukechampine.com/blake3@v1.4.1"
+      ]
+    }
+  ]
+}

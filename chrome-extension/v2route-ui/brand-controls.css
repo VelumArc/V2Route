@@ -1,0 +1,66 @@
+/* Approved glass V identity and consistent control affordances. */
+:root{--control-outline:#749ef0;--control-outline-hover:#487fe5}
+:root[data-theme=dark]{--control-outline:#6387bd;--control-outline-hover:#96bbff}
+body:not(.popup-body) :is(input:not([type=checkbox]):not([type=radio]),select,textarea){border:1px solid var(--control-outline)}
+body:not(.popup-body) :is(input:not([type=checkbox]):not([type=radio]),select,textarea):hover{border-color:var(--control-outline-hover)}
+body:not(.popup-body) :is(input,select,textarea):focus-visible{outline:2px solid var(--accent,#3777ff);outline-offset:2px}
+.rename-link{display:inline-flex!important;align-items:center;gap:5px;min-height:28px!important;padding:3px 9px!important;border:1px solid var(--control-outline)!important;border-radius:8px!important;background:rgba(225,237,255,.65)!important;color:#2354aa!important;text-decoration:none!important;font-size:12px!important;line-height:1.5!important;cursor:pointer}
+.rename-link::before{content:'';width:12px;height:12px;display:inline-block;background:currentColor;clip-path:polygon(5% 74%,65% 14%,85% 34%,25% 94%,0 100%)}
+.rename-link:hover{background:#d7e7ff!important;border-color:var(--control-outline-hover)!important}
+[data-theme=dark] .rename-link{background:#233953!important;color:#b6d3ff!important}
+[data-theme=dark] .rename-link:hover{background:#304c6c!important}
+/* Crisp native lettering: matching size, weight and baseline in both words. */
+.brand-label{display:inline-flex;align-items:baseline;gap:.24em;font-family:"Segoe UI",Arial,sans-serif;font-weight:800;line-height:1.15;letter-spacing:-.5px;white-space:nowrap;text-shadow:none;filter:none}
+.brand-label>span{font:inherit;letter-spacing:inherit;text-shadow:none;filter:none}
+.brand-proxy{color:#1761c4}
+.brand-v2route{background:linear-gradient(100deg,#0867ed,#6430c9);background-clip:text;-webkit-background-clip:text;color:transparent}
+[data-theme=dark] .brand-proxy{color:#69b3ff}
+[data-theme=dark] .brand-v2route{background-image:linear-gradient(100deg,#65aaff,#b393ff)}
+@media(prefers-color-scheme:dark){
+ [data-theme=auto] .brand-proxy{color:#69b3ff}
+ [data-theme=auto] .brand-v2route{background-image:linear-gradient(100deg,#65aaff,#b393ff)}
+}
+.brand-symbol{image-rendering:auto;object-fit:contain;filter:none}
+.sidebar .brand.brand-integrated{position:relative;display:block;flex:0 0 270px;width:270px;height:82px;min-width:0;padding:0;overflow:visible}
+.sidebar .brand.brand-integrated>.brand-symbol{display:block;position:absolute;left:-5px;top:6px;width:84px;height:84px;max-width:none;object-fit:contain;filter:none}
+.sidebar .brand.brand-integrated>.brand-label{position:absolute;left:86px;top:24px;font-size:24px}
+.sidebar .brand.brand-integrated>small{position:absolute;left:86px;top:59px;font-size:12px;line-height:1.3;color:var(--muted,#60769a)}
+html.popup-document .popup-header>.brand-symbol{position:absolute;left:12px;top:8px;width:72px;height:72px;max-width:none;filter:none;pointer-events:none}
+html.popup-document .popup-header>.popup-wordmark{position:absolute;left:98px;top:19px;font-size:22px;pointer-events:none}
+html.popup-document .popup-header .popup-brand-caption{position:absolute;left:76px;top:58px}
+html.popup-document .popup-header #popup-intro{font-size:11px;line-height:16px;margin:0;color:var(--connection-caption,#29476a);font-weight:500}
+html.popup-document .popup-actions #popup-settings>img{width:20px;height:20px;content:url('icons/popup-settings-light.svg');filter:none}
+html.popup-document[data-theme=dark] .popup-actions #popup-settings>img{content:url('icons/popup-settings.svg');filter:brightness(1.8)}
+@media(prefers-color-scheme:dark){html.popup-document[data-theme=auto] .popup-actions #popup-settings>img{content:url('icons/popup-settings.svg');filter:brightness(1.8)}}
+html.popup-document .popup-header #popup-connection{left:143px;right:12px;top:56px;gap:8px;min-height:20px;padding:0}
+html.popup-document[lang=en] .popup-header #popup-connection{left:156px;gap:7px}
+html.popup-document .popup-header #popup-current{font-size:12px;line-height:17px;color:var(--connection-text,#19365f)}
+html.popup-document .popup-header .local-dot{width:8px;height:8px;min-width:8px;flex-basis:8px;margin:0}
+html.popup-document .popup-header .popup-current .popup-icon-slot{width:19px;min-width:19px;flex-basis:19px}
+html.popup-document .popup-header .popup-current .route-icon{width:19px;height:14px}
+@media(max-width:680px){.sidebar .brand.brand-integrated{flex-basis:242px;width:242px;height:72px}.sidebar .brand.brand-integrated>.brand-symbol{width:72px;height:72px;top:0}.sidebar .brand.brand-integrated>.brand-label{left:74px;top:20px;font-size:22px}.sidebar .brand.brand-integrated>small{left:74px;top:52px;font-size:11px}}
+
+body:not(.popup-body) .route-trigger{border:1px solid var(--control-outline)!important}
+body:not(.popup-body) .route-trigger:hover{border-color:var(--control-outline-hover)!important}
+body:not(.popup-body) .route-trigger:focus-visible{outline:2px solid var(--accent,#3777ff);outline-offset:2px}
+body:not(.popup-body) .path-input-row{border-color:var(--control-outline)}
+body:not(.popup-body) .path-input-row:hover{border-color:var(--control-outline-hover)}
+body:not(.popup-body) .path-input-row:focus-within{outline:2px solid var(--accent,#3777ff);outline-offset:2px}
+body:not(.popup-body) .path-input-row input{border:0!important;outline:none!important;border-radius:0;box-shadow:none}
+
+/* Match options labels to the approved blue/violet wordmark. */
+body:not(.popup-body){--label-gradient:linear-gradient(100deg,#0867ed,#6430c9)}
+[data-theme=dark] body:not(.popup-body){--label-gradient:linear-gradient(100deg,#65aaff,#b393ff)}
+@media(prefers-color-scheme:dark){[data-theme=auto] body:not(.popup-body){--label-gradient:linear-gradient(100deg,#65aaff,#b393ff)}}
+body:not(.popup-body) .theme-ink{background-image:var(--label-gradient);background-clip:text;-webkit-background-clip:text;color:transparent}
+body:not(.popup-body) .nav-symbol{color:#3777e4}
+@media(forced-colors:active){body:not(.popup-body) .theme-ink{background:none;color:CanvasText}}
+
+/* Secondary copy shares the brand hue, without competing with gradient titles. */
+body:not(.popup-body){--support-ink:#344691;--support-panel-ink:var(--support-ink)}
+:root[data-theme=dark] body:not(.popup-body){--support-ink:#bdcaff;--support-panel-ink:#f3f5ff}
+@media(prefers-color-scheme:dark){:root[data-theme=auto] body:not(.popup-body){--support-ink:#bdcaff;--support-panel-ink:#f3f5ff}}
+:root[data-theme] body:not(.popup-body)[data-page=ip-tools]{--ip-readable:var(--support-ink)}
+body:not(.popup-body) :is(.sidebar .brand.brand-integrated>small,#page-intro,.muted,.field-label,.profile-name-label,.profile-endpoint .endpoint-label,.panel-intro,.panel-info,.route-source,.route-selection-meta .chain):not(.error):not(.success):not([role=alert]){color:var(--support-ink)}
+body:not(.popup-body) #content .editor-panel-header .panel-intro:not(.error):not(.success):not([role=alert]){color:var(--support-panel-ink)}
+@media(forced-colors:active){body:not(.popup-body){--support-ink:CanvasText;--support-panel-ink:CanvasText}}

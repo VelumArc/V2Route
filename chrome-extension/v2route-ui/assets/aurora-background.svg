@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="1210" viewBox="0 0 1100 1210" preserveAspectRatio="none" fill="none">
+  <defs>
+    <linearGradient id="base" x1="77" y1="30" x2="1020" y2="1210" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4F7FF"/><stop offset=".3" stop-color="#EAF2FF"/><stop offset=".63" stop-color="#E8F1FF"/><stop offset=".86" stop-color="#EBF0FF"/><stop offset="1" stop-color="#E5E1FF"/>
+    </linearGradient>
+    <radialGradient id="top" cx="0" cy="0" r="1" gradientTransform="translate(884 92) rotate(139) scale(390 330)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#598DFF" stop-opacity=".83"/><stop offset=".48" stop-color="#8FAFFF" stop-opacity=".69"/><stop offset="1" stop-color="#A6C2FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="left" cx="0" cy="0" r="1" gradientTransform="translate(32 505) rotate(5) scale(370 790)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EDF4FF"/><stop offset="1" stop-color="#EDF4FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="middle" cx="0" cy="0" r="1" gradientTransform="translate(642 530) rotate(-15) scale(590 580)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C7DBFF" stop-opacity=".50"/><stop offset="1" stop-color="#C9DEFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wave1" x1="0" y1="1120" x2="1100" y2="1040" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#CBE6FF" stop-opacity=".10"/><stop offset=".5" stop-color="#A6D8FF" stop-opacity=".55"/><stop offset=".76" stop-color="#77B4FE" stop-opacity=".83"/><stop offset="1" stop-color="#AFB6FF" stop-opacity=".62"/>
+    </linearGradient>
+    <linearGradient id="wave2" x1="380" y1="1200" x2="1120" y2="1065" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A5D6FF" stop-opacity=".07"/><stop offset=".45" stop-color="#BCE6FF" stop-opacity=".55"/><stop offset="1" stop-color="#C1B4FF" stop-opacity=".75"/>
+    </linearGradient>
+    <radialGradient id="bottomGlow" cx="0" cy="0" r="1" gradientTransform="translate(1053 1198) rotate(-135) scale(360 295)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A4AAFF" stop-opacity=".54"/><stop offset="1" stop-color="#A4AAFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1100" height="1210" fill="url(#base)"/>
+  <rect width="1100" height="1210" fill="url(#top)"/>
+  <rect width="1100" height="1210" fill="url(#left)"/>
+  <rect width="1100" height="1210" fill="url(#middle)"/>
+  <rect width="1100" height="1210" fill="url(#bottomGlow)"/>
+  <path d="M0 1203C180 1217 335 1212 505 1172C645 1138 694 1083 840 1061C936 1047 1008 1040 1100 1034V1210H0Z" fill="url(#wave1)"/>
+  <path d="M290 1210C471 1202 541 1173 668 1131C809 1085 951 1049 1100 1059V1210H290Z" fill="url(#wave2)"/>
+  <path d="M0 1203C180 1217 335 1212 505 1172C645 1138 694 1083 840 1061C936 1047 1008 1040 1100 1034" stroke="#F8FDFF" stroke-opacity=".82" stroke-width="2.5"/>
+  <path d="M294 1210C471 1202 541 1173 668 1131C809 1085 951 1049 1100 1059" stroke="#F8FDFF" stroke-opacity=".65" stroke-width="2"/>
+</svg>

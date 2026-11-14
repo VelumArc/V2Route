@@ -1,0 +1,15 @@
+/private/
+/data/
+/runtime/
+/cores/
+/native/
+/receipts/
+/build-cache/
+/dist/
+/sources/*.zip
+node_modules/
+__pycache__/
+*.pyc
+*.log
+*.db
+*.sqlite
